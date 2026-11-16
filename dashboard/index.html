@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Northstar Radar · Follow the signal</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<a class="skip" href="#rankings">Skip to rankings</a>
+<header class="masthead"><a class="brand" href="#"><span class="star" aria-hidden="true">✳</span> NORTHSTAR <span>RADAR</span></a><nav aria-label="Sections"><a href="#rankings">Launch radar</a><a href="#method">The model</a><a href="#trading">Already trading ↗</a></nav><span class="sealed"><i></i> SEALED SNAPSHOT</span></header>
+<main>
+<section class="hero"><div><p class="eyebrow">THE PRE-TOKEN OBSERVATORY / VOL. 01</p><h1>Follow the signal.<br><span>Find your next frontier.</span></h1><p class="intro">A clearer view of protocols that record no token. Explore conditional launch values, inspect the evidence, and build a considered farm plan.</p><div class="hero-note"><span>●</span> Snapshot research <b> / </b> No live feeds <b> / </b> No launch promises</div></div><div class="radar-art" aria-hidden="true"><div class="orbit o1"></div><div class="orbit o2"></div><div class="orbit o3"></div><div class="axis ax"></div><div class="axis ay"></div><span class="north">N</span><div class="sweep"></div><i class="blip b1"></i><i class="blip b2"></i><i class="blip b3"></i><span class="radar-label">SCANNING THE FRONTIER</span></div></section>
+<section id="metrics" class="metrics" aria-label="Snapshot summary"></section>
+<section id="rankings"><div class="section-heading"><div><p class="eyebrow">01 / DISCOVERY</p><h2>Launch radar <span class="pill">PRE-TOKEN RECORDS</span></h2></div><span class="muted">One model. Every protocol.</span></div>
+<div class="toolbar"><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search protocol, chain, category…" aria-label="Search protocols"></label><label class="category-label">Category <select id="category" aria-label="Filter category"><option value="">All categories</option></select></label><button id="reset" class="quiet">Reset filters ↺</button><span id="count" role="status"></span></div>
+<div class="table-shell"><table><caption class="sr-only">Conditional token valuations. Select a protocol to inspect the model and farm plan.</caption><thead><tr><th data-key="rank"><button>Rank <span></span></button></th><th>Protocol / ecosystem</th><th data-key="implied_value_usd"><button>Implied value <span></span></button></th><th data-key="tvl_usd"><button>TVL <span></span></button></th><th data-key="change_7d"><button>7d change <span></span></button></th><th data-key="age_days"><button>Tracked age <span></span></button></th><th><span class="sr-only">Detail</span></th></tr></thead><tbody id="rows"></tbody></table><div id="empty" hidden>No signals match. Try another category or reset the filters.</div></div><div class="table-foot"><span>40 watchlist records + 160 below-floor discoveries</span><span>USD · Values are model estimates, not market prices</span></div></section>
+<section id="method" class="method"><div><p class="eyebrow">02 / THE LENS</p><h2>Capital, momentum,<br>and time in the field.</h2><p>TVL anchors the estimate. Seven-day growth adjusts momentum; tracking age adds a bounded maturity premium. A small chain breadth factor recognizes distribution. No names receive special treatment.</p></div><div><div class="formula">TVL × 0.32 × momentum × maturity × breadth</div><dl><div><dt>Momentum</dt><dd>1 + clamp(7d %, −60, 120) / 200</dd></div><div><dt>Maturity</dt><dd>0.70 + 0.30 × √(min(age, 1460) / 1460)</dd></div><div><dt>Breadth</dt><dd>1 + min(6, max(0, chains − 1)) / 100</dd></div></dl><p class="fine">Rounded to whole dollars. Missing growth uses 0%; unknown age uses 365 days. Age is measured against the sealed snapshot, a tracking proxy rather than proof of token history. Category has no valuation premium. This estimates a whole conditional token value, never a personal allocation or a probability of launch.</p></div></section>
+<section id="trading"><div class="section-heading"><div><p class="eyebrow">03 / MARKET CONTEXT</p><h2>Already trading <span id="live-count" class="pill"></span></h2></div><span class="muted">Token-bearing records · excluded from rankings</span></div><p class="live-note">Snapshot market caps are shown separately. A recorded token may have an unreported market cap.</p><label class="live-search">Find a trading protocol <input id="live-search" type="search" placeholder="Search names or symbols"></label><div id="live" class="live-grid"></div></section>
+<footer><span>✳ NORTHSTAR RADAR</span><p>Built from the sealed DefiLlama protocol snapshot. Records are evidence, not proof; reward programs, product access and fees require independent verification.</p><a href="#">Back to north ↑</a></footer>
+</main>
+<dialog id="detail" aria-labelledby="detail-title"><div id="detail-content"></div></dialog>
+<script src="../data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
